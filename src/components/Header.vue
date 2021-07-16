@@ -48,7 +48,7 @@ export default {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-@media (max-width: 600px)
+@media (max-width: 700px)
 {
   #headerIcon{
     position: unset;

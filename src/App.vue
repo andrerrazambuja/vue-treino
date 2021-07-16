@@ -6,10 +6,14 @@
       <!-- Campo para adicionar tarefas -->
       <div class="card input">
 
-        <input type="text" v-model="taskInput" name="task" id="taskInput" v-on:keyup.enter="addTask()" placeholder="Insira uma tarefa">
+        <input type="text" v-model="taskInput" name="task" id="taskInput" v-on:keyup.enter="addTask()" maxlength="40" placeholder="Insira uma tarefa">
 
         <button class="actionButton" @click="addTask()"> <i class="fas fa-long-arrow-alt-down"></i> </button>
 
+      </div>
+
+      <div v-if="taskInput" id="charCounter">
+        {{taskInput.length}}/40
       </div>
 
       <!-- Tarefas -->
@@ -53,8 +57,8 @@ export default {
       this.tasks.splice(index, 1)
     },
     addTask() {
-      if(this.taskInput.length > 0 && this.taskInput.length <= 30) this.tasks.push(this.taskInput)
-      else window.alert('A tarefa deve ter entre 0 à 30 caracteres')
+      if(this.taskInput.length > 0 && this.taskInput.length <= 40) this.tasks.push(this.taskInput)
+      else window.alert('A tarefa deve ter entre 0 à 40 caracteres')
       this.taskInput = null;
     },
     downTask(index) {
@@ -96,7 +100,7 @@ body{
   margin: 0.5em;
   padding: 1.5em;
   background-color: rgba(230, 143, 44, 0.308);
-  width: 25%;
+  width: 35%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -147,7 +151,7 @@ body{
 }
 
 /* Texto para quando não tarefas cadastradas */
-.placeholder{
+.placeholder, #charCounter{
   margin: 1em;
   color: rgba(255, 255, 255, 0.521);
 }
