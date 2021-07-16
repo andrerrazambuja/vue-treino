@@ -1,4 +1,10 @@
-# vue-treinamento
+# Vue Treinamento
+
+## Descrição
+Este é um projeto feito com o intuito de aprender sobre o funcionamento da tecnlogia Vue.Js
+
+André Azambuja - 07/2021
+
 
 ## Project setup
 ```
