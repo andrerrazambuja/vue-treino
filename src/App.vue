@@ -62,7 +62,7 @@ export default {
       this.taskInput = null;
     },
     downTask(index) {
-      if(index == (this.tasks.length - 1)) return console.log(index);
+      if(index == (this.tasks.length - 1)) return;
       this.tasks.splice(index, 2 , this.tasks[index+1] , this.tasks[index]);
     },
   },
