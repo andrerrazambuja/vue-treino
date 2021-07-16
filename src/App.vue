@@ -6,20 +6,22 @@
       <!-- Campo para adicionar tarefas -->
       <div class="card input">
 
-        <input type="text" v-model="taskInput" name="task" id="taskInput" placeholder="Insira uma tarefa">
+        <input type="text" v-model="taskInput" name="task" id="taskInput" v-on:keyup.enter="addTask()" placeholder="Insira uma tarefa">
 
-        <button @click="addTask()"> > </button>
+        <button class="actionButton" @click="addTask()"> <i class="fas fa-long-arrow-alt-down"></i> </button>
 
       </div>
 
       <!-- Tarefas -->
       <div  class="card task" v-for="(task, index) in tasks" :key="task">
 
+        <button class="actionButton" @click="downTask(index)"> <i class="fas fa-sort-down"></i> </button>
+
         <span>
-          {{index+1}} - {{task}}
+          {{index + 1}} - {{task}}
         </span>
 
-        <button @click="removeTask(index)"> - </button>
+        <button class="actionButton" @click="removeTask(index)"> <i class="fas fa-trash-alt"></i> </button>
 
       </div>
 
@@ -42,6 +44,7 @@ export default {
   data:() => {
     return {
       tasks: [],
+      taskInput: '',
     }
   },
   // Métodos
@@ -50,8 +53,13 @@ export default {
       this.tasks.splice(index, 1)
     },
     addTask() {
-      if(this.taskInput.length > 0) this.tasks.push(this.taskInput)
+      if(this.taskInput.length > 0 && this.taskInput.length <= 30) this.tasks.push(this.taskInput)
+      else window.alert('A tarefa deve ter entre 0 à 30 caracteres')
       this.taskInput = null;
+    },
+    downTask(index) {
+      if(index == (this.tasks.length - 1)) return console.log(index);
+      this.tasks.splice(index, 2 , this.tasks[index+1] , this.tasks[index]);
     },
   },
   // Componentes importados
@@ -101,8 +109,9 @@ body{
   width: 90%;
   border: 0;
   outline: 0;
-  height: 2em;
+  min-height: 2em;
   margin-right: 4px;
+  overflow: wrap;
   padding: 0 1em;
   background-color: rgba(128, 128, 128, 0.45);
   border-bottom: 1px solid rgb(230, 143, 44);
@@ -115,8 +124,8 @@ body{
 }
 
 /* Botões dos cards ( '>' e '-' ) */
-.card button{
-  height: 2em;
+.card .actionButton{
+  min-height: 2em;
   width: 10%;
   border: 0;
   outline: 0;
@@ -131,8 +140,8 @@ body{
 
 /* Texto dos cards com as tarefas */
 .card span{
-  width: 90%;
-  margin-right: 4px;
+  width: 80%;
+  margin: 0 4px;
   background-color: rgba(128, 128, 128, 0.45);
   padding: 0.5em 1em;
 }
@@ -142,4 +151,5 @@ body{
   margin: 1em;
   color: rgba(255, 255, 255, 0.521);
 }
+
 </style>
