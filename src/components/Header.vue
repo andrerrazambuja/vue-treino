@@ -19,6 +19,7 @@ export default {
 #header{
   background-color: rgb(99, 99, 99);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   padding: 10px 20px;
@@ -45,5 +46,19 @@ export default {
 
 .headerLink:hover{  
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 600px)
+{
+  #headerIcon{
+    position: unset;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.3em;
+  }
+  .headerLink{
+    width: 20%;
+    margin-bottom: 0.5em;
+  }
 }
 </style>

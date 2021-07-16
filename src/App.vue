@@ -152,4 +152,27 @@ body{
   color: rgba(255, 255, 255, 0.521);
 }
 
+@media (max-width: 1000px)
+{
+  .card{
+    width: 70%;
+  }
+
+  #app{
+  padding: 1em 0;
+  }
+}
+
+
+@media (max-width: 600px)
+{
+  .card{
+    width: 90%;
+  }
+
+  #app{
+  padding: 1em 0;
+  }
+}
+
 </style>
