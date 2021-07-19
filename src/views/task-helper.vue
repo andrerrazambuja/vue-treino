@@ -78,7 +78,8 @@ export default {
 .card{
   margin: 0.5em;
   padding: 1.5em;
-  background-color: rgba(230, 143, 44, 0.308);
+  background: rgb(255,154,0);
+  background: linear-gradient(93deg, rgba(255,154,0,0.4) 19%, rgba(253,226,45,0.4) 60%, rgba(253,45,217,0.4) 100%);
   width: 35%;
   display: flex;
   justify-content: space-between;
@@ -97,7 +98,6 @@ export default {
   overflow: wrap;
   padding: 0 1em;
   background-color: rgba(128, 128, 128, 0.45);
-  border-bottom: 1px solid rgb(230, 143, 44);
   color: white;
   cursor: pointer;
 }
@@ -111,9 +111,9 @@ export default {
   min-height: 2em;
   width: 10%;
   border: 0;
+  border-radius: 5px;
   outline: 0;
-  background-color: rgba(230, 143, 44, 0.699);
-  border-bottom: 1px solid rgb(230, 143, 44);
+  background-color: rgb(253, 198, 45, 0.8);
   cursor: pointer;
 }
 
