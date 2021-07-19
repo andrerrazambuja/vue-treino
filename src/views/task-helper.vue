@@ -24,9 +24,14 @@
     </div>
 
     <!-- placeholder para quando não há nenhuma tarefa -->
-    <div class="placeholder" v-if="!tasks.length">
-      Ainda não existem tarefas.
-    </div>
+    <transition
+      enter-active-class="animate__animated animate__fadeInUp"
+      leave-active-class="animate__animated animate__fadeOutDown"
+    >    
+      <div class="placeholder" v-if="!tasks.length">
+        Ainda não existem tarefas.
+      </div>
+    </transition>
   </div>
 </template>
 
