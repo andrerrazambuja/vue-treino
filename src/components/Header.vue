@@ -1,11 +1,8 @@
 <template>
   <div id="header">
-    <div id="headerIcon">André</div>
-    <div class="headerLink">Home</div>
-    <div class="headerLink">Sobre</div>
-    <div class="headerLink">Teste</div>
-    <div class="headerLink">Contato</div>
-    <div class="headerLink">Outros</div>
+    <router-link to="/" id="headerIcon">André</router-link>
+    <router-link to="/" class="headerLink">Home</router-link>
+    <router-link to="/task-helper" class="headerLink">Task Helper</router-link>
   </div>
 </template>
 
@@ -46,6 +43,11 @@ export default {
 
 .headerLink:hover{  
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+a{
+  text-decoration: none;
+  color: white;
 }
 
 @media (max-width: 700px)
