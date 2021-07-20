@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import TaskHelper from '../views/task-helper.vue'
 import Photos from '../views/photos.vue'
+import Validation from '../views/form-validation.vue'
 
 
 Vue.use(VueRouter)
@@ -22,6 +23,11 @@ const routes = [
     path: '/photos',
     name: 'Fotos',
     component: Photos
+  },
+  {
+    path: '/form-validation',
+    name: 'Validation',
+    component: Validation
   }
 ]
 

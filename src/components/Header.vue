@@ -4,6 +4,7 @@
     <router-link to="/" class="headerLink">Home</router-link>
     <router-link to="/task-helper" class="headerLink">Task Helper</router-link>
     <router-link to="/photos" class="headerLink">Fotos</router-link>
+    <router-link to="/form-validation" class="headerLink">Forms</router-link>
   </div>
 </template>
 
