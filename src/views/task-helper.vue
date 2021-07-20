@@ -88,6 +88,11 @@ export default {
   border-radius: 10px;
 }
 
+.task{  
+  background: rgb(255,154,0);
+  background: linear-gradient(93deg, rgba(255,154,0,0.4) 19%, rgba(253,226,45,0.4) 60%, rgba(253, 215, 45, 0.4) 100%); 
+}
+
 /* Input de tarefa */
 .card input{
   width: 90%;
@@ -115,6 +120,7 @@ export default {
   outline: 0;
   background-color: rgb(253, 198, 45, 0.8);
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .card button:hover{

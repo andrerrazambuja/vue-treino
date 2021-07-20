@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import taskHelper from '../views/task-helper.vue'
+import TaskHelper from '../views/task-helper.vue'
+import Photos from '../views/photos.vue'
 
 
 Vue.use(VueRouter)
@@ -15,7 +16,12 @@ const routes = [
   {
     path: '/task-helper',
     name: 'Task Helper',
-    component: taskHelper
+    component: TaskHelper
+  },
+  {
+    path: '/photos',
+    name: 'Fotos',
+    component: Photos
   }
 ]
 

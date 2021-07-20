@@ -3,6 +3,7 @@
     <router-link to="/" id="headerIcon">André</router-link>
     <router-link to="/" class="headerLink">Home</router-link>
     <router-link to="/task-helper" class="headerLink">Task Helper</router-link>
+    <router-link to="/photos" class="headerLink">Fotos</router-link>
   </div>
 </template>
 
