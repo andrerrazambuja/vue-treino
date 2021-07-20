@@ -2,14 +2,14 @@
   <div id="validation">
       <h1>Form Validation</h1>
       <div id="formDiv">
-        <input class="input required" type="text"  v-model="name"     placeholder="Nome"      style="grid-column: span 8">
-        <input class="input error"    type="text"  v-model="lastname" placeholder="Sobrenome" style="grid-column: span 8">
-        <input class="input"          type="text"  v-model="address"  placeholder="Endereço"  style="grid-column: span 10">
-        <input class="input"          type="text"  v-model="number"   placeholder="Número"    style="grid-column: span 6">
-        <input class="input"          type="text"  v-model="cpf"      placeholder="CPF"       style="grid-column: span 4">
-        <input class="input"          type="email" v-model="email"    placeholder="E-mail"    style="grid-column: span 8">
-        <input class="input"          type="date"  v-model="birthdate"                        style="grid-column: span 4">
-        <div   class="gridFix"                                                             style="grid-column: span 13">
+        <input class="input required" type="text"   v-model="name"     placeholder="Nome"      style="grid-column: span 8">
+        <input class="input error"    type="text"   v-model="lastname" placeholder="Sobrenome" style="grid-column: span 8">
+        <input class="input"          type="text"   v-model="address"  placeholder="Endereço"  style="grid-column: span 10">
+        <input class="input"          type="number" v-model="number"   placeholder="Número"    style="grid-column: span 6">
+        <input class="input"          type="text"   v-model="cpf"      placeholder="CPF"       style="grid-column: span 4" v-mask="'###.###.###-##'">
+        <input class="input"          type="email"  v-model="email"    placeholder="E-mail"    style="grid-column: span 8">
+        <input class="input"          type="date"   v-model="birthdate"                        style="grid-column: span 4">
+        <div   class="gridFix"                                                                style="grid-column: span 13">
         </div>
         <button style="grid-column: span 3">
         Enviar
@@ -109,6 +109,18 @@ export default {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 6px 0px;
 }
 
+/* Remover flechas do input type number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 @media (max-width: 700px)
 {
