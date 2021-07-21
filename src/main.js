@@ -4,6 +4,8 @@ import router from './router'
 
 import VueMask from 'v-mask';
 Vue.use(VueMask);
+import Vuelidate from 'vuelidate';
+Vue.use(Vuelidate);
 
 import 'animate.css'
 
