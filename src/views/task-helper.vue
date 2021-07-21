@@ -60,7 +60,10 @@ export default {
       if(index == (this.tasks.length - 1)) return;
       this.tasks.splice(index, 2 , this.tasks[index+1] , this.tasks[index]);
     },
-  }
+  },
+  beforeMount(){
+    document.title = "Treino Vue: Task Helper"
+ },
 }
 </script>
 

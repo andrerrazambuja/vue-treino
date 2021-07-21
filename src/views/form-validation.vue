@@ -88,6 +88,7 @@ const { required } = require("vuelidate/lib/validators");
 
 export default {
   name: "Validation",
+  title: "Validation",
   data: () => {
     return {
       name: "",
@@ -127,6 +128,9 @@ export default {
       this.$v.$touch();
     },
   },
+  beforeMount(){
+    document.title = "Treino Vue: Forms"
+ },
 };
 </script>
 

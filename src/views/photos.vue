@@ -17,7 +17,6 @@
 </template>
 
 <script>
-
 export default {
   name: "Photos",
   methods: {
@@ -25,7 +24,10 @@ export default {
       console.log(event.target.src)
       this.$refs.mainPhoto.src = event.target.src
     }
-  }
+  },
+  beforeMount(){
+    document.title = "Treino Vue: Fotos"
+ },
 };
 </script>
 

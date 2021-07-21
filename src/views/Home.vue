@@ -29,8 +29,12 @@
 </template>
 
 <script>
+
 export default {
-  name: "Home",
+  name: "Home", 
+  beforeMount(){
+    document.title = "Treino Vue: Home"
+ },
 };
 </script>
 
@@ -51,6 +55,7 @@ h1{
   background: rgb(255,154,0);
   background: linear-gradient(93deg, rgba(255,154,0,1) 19%, rgba(253,226,45,1) 60%, rgba(253,45,217,1) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
