@@ -3,6 +3,12 @@
 ## Descrição
 Este é um projeto feito com o intuito de aprender sobre o funcionamento da tecnlogia Vue.Js
 
+A aplicação conta com exemplos de:
+ - Simples task helper.
+ - Galeria de imagens.
+ - Validação de formulários, usando plugins vuelidate e v-mask.
+ - Animaçoes com o pacote animate.css (https://animate.style/)
+
 André Azambuja - 07/2021
 
 
