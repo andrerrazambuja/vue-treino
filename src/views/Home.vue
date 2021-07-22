@@ -1,5 +1,6 @@
 <template>
   <div id="home">
+    <Notification :type="'success'" :title="'Bem-vindo!'" :text="'Esta é a página que estou usando para treinar Vue Js, sinta-se livre para explorá-la.'"/>
     <h1>Home</h1>
     <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec urna
@@ -30,11 +31,17 @@
 
 <script>
 
+import Notification from '../components/Notification.vue'
+
 export default {
   name: "Home", 
   beforeMount(){
     document.title = "Treino Vue: Home"
  },
+  // Componentes importados
+ components: {
+    Notification
+ }
 };
 </script>
 
@@ -64,5 +71,12 @@ p {
   text-align: justify;
   text-justify: inter-word;
   text-indent: 50px;
+}
+
+@media (max-width: 900px)
+{
+  #home {
+    width: 90%;
+  }
 }
 </style>

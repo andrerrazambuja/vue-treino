@@ -31,6 +31,7 @@ export default {
 html{
   font-family: monospace;
   color: white;
+  overflow-x: hidden;
 }
 
 body{
