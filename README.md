@@ -7,6 +7,7 @@ A aplicação conta com exemplos de:
  - Simples task helper.
  - Galeria de imagens.
  - Validação de formulários, usando plugins vuelidate e v-mask.
+ - Componente de notificações (exemplo na página Home)
  - Animaçoes com o pacote animate.css (https://animate.style/)
 
 André Azambuja - 07/2021
