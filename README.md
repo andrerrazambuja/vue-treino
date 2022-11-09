@@ -1,7 +1,7 @@
 # Vue Treinamento
 
 ## Descrição
-Este é um projeto feito com o intuito de aprender sobre o funcionamento da tecnlogia Vue.Js
+Este é um projeto feito com o intuito de aprender sobre o funcionamento da tecnologia Vue.Js
 
 A aplicação conta com exemplos de:
  - Simples task helper.
